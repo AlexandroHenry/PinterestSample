@@ -13,5 +13,8 @@ struct PinterestApp: App {
         WindowGroup {
             ContentView()
         }
+        // Hiding Title bar
+        .windowStyle(HiddenTitleBarWindowStyle())
+//        .windowStyle(.hiddenTitleBar)
     }
 }

@@ -11,6 +11,12 @@
 		AA999283293D7EE500435240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA999282293D7EE500435240 /* ContentView.swift */; };
 		AA999285293D7EE800435240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA999284293D7EE800435240 /* Assets.xcassets */; };
 		AA999289293D7EE800435240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA999288293D7EE800435240 /* Preview Assets.xcassets */; };
+		AA999291293D7F3100435240 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA999290293D7F3100435240 /* Home.swift */; };
+		AA9992A6293D7FDD00435240 /* BlurWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9992A5293D7FDD00435240 /* BlurWindow.swift */; };
+		AA9992A8293D831500435240 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9992A7293D831500435240 /* TabButton.swift */; };
+		AA9992AB293D968900435240 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9992AA293D968900435240 /* ImageModel.swift */; };
+		AA9992AE293D98E900435240 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9992AD293D98E900435240 /* ImageViewModel.swift */; };
+		AA9992B4293DA3CF00435240 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA9992B3293DA3CF00435240 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +26,24 @@
 		AA999284293D7EE800435240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA999286293D7EE800435240 /* Pinterest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pinterest.entitlements; sourceTree = "<group>"; };
 		AA999288293D7EE800435240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA999290293D7F3100435240 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AA999296293D7F6B00435240 /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9992A5293D7FDD00435240 /* BlurWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurWindow.swift; sourceTree = "<group>"; };
+		AA9992A7293D831500435240 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		AA9992AA293D968900435240 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		AA9992AD293D98E900435240 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA99927A293D7EE500435240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9992B4293DA3CF00435240 /* SDWebImageSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA999293293D7F6B00435240 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AA99927D293D7EE500435240 /* Pinterest.app */,
+				AA999296293D7F6B00435240 /* macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +73,9 @@
 		AA99927F293D7EE500435240 /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
+				AA9992AC293D98DA00435240 /* ViewModel */,
+				AA9992A9293D968000435240 /* Model */,
+				AA99928F293D7F2400435240 /* View */,
 				AA999280293D7EE500435240 /* PinterestApp.swift */,
 				AA999282293D7EE500435240 /* ContentView.swift */,
 				AA999284293D7EE800435240 /* Assets.xcassets */,
@@ -67,6 +91,32 @@
 				AA999288293D7EE800435240 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA99928F293D7F2400435240 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA999290293D7F3100435240 /* Home.swift */,
+				AA9992A5293D7FDD00435240 /* BlurWindow.swift */,
+				AA9992A7293D831500435240 /* TabButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA9992A9293D968000435240 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA9992AA293D968900435240 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA9992AC293D98DA00435240 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA9992AD293D98E900435240 /* ImageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,8 +135,28 @@
 			dependencies = (
 			);
 			name = Pinterest;
+			packageProductDependencies = (
+				AA9992B3293DA3CF00435240 /* SDWebImageSwiftUI */,
+			);
 			productName = Pinterest;
 			productReference = AA99927D293D7EE500435240 /* Pinterest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA999295293D7F6B00435240 /* macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA9992A2293D7F6E00435240 /* Build configuration list for PBXNativeTarget "macOS" */;
+			buildPhases = (
+				AA999292293D7F6B00435240 /* Sources */,
+				AA999293293D7F6B00435240 /* Frameworks */,
+				AA999294293D7F6B00435240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOS;
+			productName = macOS;
+			productReference = AA999296293D7F6B00435240 /* macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +172,9 @@
 					AA99927C293D7EE500435240 = {
 						CreatedOnToolsVersion = 14.1;
 					};
+					AA999295293D7F6B00435240 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 				};
 			};
 			buildConfigurationList = AA999278293D7EE400435240 /* Build configuration list for PBXProject "Pinterest" */;
@@ -113,11 +186,15 @@
 				Base,
 			);
 			mainGroup = AA999274293D7EE400435240;
+			packageReferences = (
+				AA9992B2293DA3CF00435240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AA99927E293D7EE500435240 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AA99927C293D7EE500435240 /* Pinterest */,
+				AA999295293D7F6B00435240 /* macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +209,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA999294293D7F6B00435240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,8 +223,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9992AE293D98E900435240 /* ImageViewModel.swift in Sources */,
+				AA9992A6293D7FDD00435240 /* BlurWindow.swift in Sources */,
+				AA9992AB293D968900435240 /* ImageModel.swift in Sources */,
 				AA999283293D7EE500435240 /* ContentView.swift in Sources */,
+				AA999291293D7F3100435240 /* Home.swift in Sources */,
+				AA9992A8293D831500435240 /* TabButton.swift in Sources */,
 				AA999281293D7EE500435240 /* PinterestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA999292293D7F6B00435240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +428,64 @@
 			};
 			name = Release;
 		};
+		AA9992A3293D7F6E00435240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UYV54B9WB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alaxhenry.macOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA9992A4293D7F6E00435240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 2UYV54B9WB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alaxhenry.macOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,7 +507,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AA9992A2293D7F6E00435240 /* Build configuration list for PBXNativeTarget "macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9992A3293D7F6E00435240 /* Debug */,
+				AA9992A4293D7F6E00435240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA9992B2293DA3CF00435240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA9992B3293DA3CF00435240 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9992B2293DA3CF00435240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA999275293D7EE400435240 /* Project object */;
 }
